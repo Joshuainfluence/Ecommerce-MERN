@@ -1,0 +1,10 @@
+install vite using the command -> npm insall vite@latest
+create project name
+select frame work react
+select variant, javascript
+navigate to the frontend directory
+install node modules using -> npm install
+install react router dom for routing and toastify to display toast notification-> npm install react-router-dom react toastify
+now we run the project on localhost -> npm run dev
+navigate to frontend/src/assets then delete the app.css file
+
