@@ -1,0 +1,393 @@
+import logo_icon from "./logo.png"
+import search_icon from "./search.png"
+import profile_icon from "./profile.png"
+import cart_icon from "./cart.png"
+import menu_icon from "./menu.png"
+import close_icon from './close.png'
+import hero_img from './hero_img.jpg'
+
+export const assets = {
+    logo_icon,
+    search_icon,
+    profile_icon,
+    cart_icon,
+    menu_icon,
+    close_icon,
+    hero_img,
+}
+
+export const products = [
+    {
+        _id: "aaaaa",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 100,
+        img: [hero_img],
+        category: "Women",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "abbbba",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "bbbbbbbb",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "bbsafdes",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "safgrtert",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "werwqggsd",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "hertqvsf",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "afseryjh",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "safhewty",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "aaetyy",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "a4ejjtw",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "aetuyr3er",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "hywssahh",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "wrwqjnrethy",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "jrtyekje",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "dyewyer",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "ewyeryw",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "wqttrt",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "sdfhaer",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "qetrwqy",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "qtwejj",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "wshgerrw",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "weyruj",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "jjweryrey",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "eyery",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "juj54yu7wq",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "j45y74w",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "ghjjjt",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "tutrwe",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "srduu",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    },
+    {
+        _id: "jjhnntry",
+        name: "Some Kind of Clothes",
+        description: "Very nice and comfortable for girls with good body sha",
+        price: 200,
+        img: [hero_img],
+        category: "Men",
+        subCategory: "Topwear",
+        sizes: ["S", "M", "L"],
+        dates: 12342425425,
+        bestseller: true
+    }
+
+]
