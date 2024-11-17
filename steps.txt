@@ -1,3 +1,5 @@
+SETTING UP FRONTEND PART
+
 install vite using the command -> npm insall vite@latest
 create project name
 select frame work react
@@ -7,4 +9,10 @@ install node modules using -> npm install
 install react router dom for routing and toastify to display toast notification-> npm install react-router-dom react toastify
 now we run the project on localhost -> npm run dev
 navigate to frontend/src/assets then delete the app.css file
-
+installing tailwind css, search vite + tailwind on the browser and follow the installation process
+navigate to frontend/src and create a folder=> pages and another folder => components, and another folder=> context to handle all the logics in the ecommerce
+on the pages folder, create all files for each pages of the project.
+navigate to the main.jsx file, edit the StrictMode to BrowserRouter and import it from the react-router-dom
+navigate to the app.jsx file, add and import all the required routes needed in the project
+create a Navbar.jsx in the components folder, this file is responsible for the navigations across pages
+create an object for the assets in the asset/assets.js file
