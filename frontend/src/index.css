@@ -4,11 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-a.active hr{
+a.active hr {
     display: block;
 }
 
-*{
+* {
     font-family: Outfit;
 }
 
@@ -16,5 +16,11 @@ a.active hr{
     font-family: "Prata", serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
+}
+
+@media (max-width: 640px){
+    a.active{
+        background-color: gray;
+        color: #fff;
+    }
+}

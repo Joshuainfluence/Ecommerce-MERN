@@ -5,6 +5,7 @@ import cart_icon from "./cart.png"
 import menu_icon from "./menu.png"
 import close_icon from './close.png'
 import hero_img from './hero_img.jpg'
+import kid_01 from './kid-01.jpg'
 
 export const assets = {
     logo_icon,
@@ -14,6 +15,7 @@ export const assets = {
     menu_icon,
     close_icon,
     hero_img,
+    kid_01,
 }
 
 export const products = [
