@@ -5,7 +5,33 @@ import cart_icon from "./cart.png"
 import menu_icon from "./menu.png"
 import close_icon from './close.png'
 import hero_img from './hero_img.jpg'
-import kid_01 from './kid-01.jpg'
+// import kid_01 from './kid-01.jpg'
+import dropdown_icon from './dropdown.png'
+import arrow_down_icon from './arrow_down.png'
+import arrow_right_icon from './arrow_right.png'
+import man1 from './man1.jpg'
+import woman1 from './woman1.jpg'
+import child1 from './child1.jpg'
+import man2 from './man2.jpg'
+import man3 from './man3.jpg'
+import man4 from './man4.jpg'
+import man5 from './man5.jpg'
+import man6 from './man6.jpg'
+import woman2 from './woman2.jpg'
+import woman3 from './woman3.jpg'
+import woman4 from './woman4.jpg'
+import woman5 from './woman5.jpg'
+import woman6 from './woman6.jpg'
+import woman7 from './woman7.jpg'
+import woman8 from './woman8.jpg'
+import woman9 from './woman9.jpg'
+import woman10 from './woman10.jpg'
+import child2 from './child2.jpg'
+import child3 from './child3.jpg'
+import child4 from './child4.jpg'
+
+
+
 
 export const assets = {
     logo_icon,
@@ -15,7 +41,14 @@ export const assets = {
     menu_icon,
     close_icon,
     hero_img,
-    kid_01,
+    // kid_01,
+    dropdown_icon,
+    arrow_down_icon,
+    arrow_right_icon,
+    man1,
+    woman1,
+    child1,
+    man2
 }
 
 export const products = [
@@ -24,7 +57,7 @@ export const products = [
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 100,
-        img: [hero_img],
+        img: [woman1],
         category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
@@ -36,7 +69,7 @@ export const products = [
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 200,
-        img: [hero_img],
+        img: [man1],
         category: "Men",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
@@ -47,10 +80,10 @@ export const products = [
         _id: "bbbbbbbb",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
+        price: 300,
+        img: [man2],
         category: "Men",
-        subCategory: "Topwear",
+        subCategory: "Bottomwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -60,9 +93,9 @@ export const products = [
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 200,
-        img: [hero_img],
+        img: [man3],
         category: "Men",
-        subCategory: "Topwear",
+        subCategory: "Bottomwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -71,10 +104,10 @@ export const products = [
         _id: "safgrtert",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
+        price: 100,
+        img: [man4],
         category: "Men",
-        subCategory: "Topwear",
+        subCategory: "Winterwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -83,9 +116,9 @@ export const products = [
         _id: "werwqggsd",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
+        price: 500,
+        img: [woman2],
+        category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
@@ -96,7 +129,7 @@ export const products = [
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 200,
-        img: [hero_img],
+        img: [man5],
         category: "Men",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
@@ -107,9 +140,9 @@ export const products = [
         _id: "afseryjh",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
+        price: 300,
+        img: [woman3],
+        category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
@@ -119,10 +152,10 @@ export const products = [
         _id: "safhewty",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
+        price: 100,
+        img: [man6],
         category: "Men",
-        subCategory: "Topwear",
+        subCategory: "Bottomwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -131,10 +164,10 @@ export const products = [
         _id: "aaetyy",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
+        price: 100,
+        img: [man2],
         category: "Men",
-        subCategory: "Topwear",
+        subCategory: "Bottmwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -143,10 +176,10 @@ export const products = [
         _id: "a4ejjtw",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
+        price: 300,
+        img: [woman4],
+        category: "Women",
+        subCategory: "Wintewear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -155,9 +188,9 @@ export const products = [
         _id: "aetuyr3er",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
+        price: 500,
+        img: [woman5],
+        category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
@@ -167,10 +200,10 @@ export const products = [
         _id: "hywssahh",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
+        price: 400,
+        img: [child2],
+        category: "Kids",
+        subCategory: "Winterwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -180,9 +213,9 @@ export const products = [
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
+        img: [woman6],
+        category: "Women",
+        subCategory: "Bottomwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -191,10 +224,10 @@ export const products = [
         _id: "jrtyekje",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
+        price: 100,
+        img: [woman7],
+        category: "Women",
+        subCategory: "Winterwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -203,9 +236,9 @@ export const products = [
         _id: "dyewyer",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
+        price: 300,
+        img: [child3],
+        category: "Kids",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
@@ -216,8 +249,8 @@ export const products = [
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 200,
-        img: [hero_img],
-        category: "Men",
+        img: [woman8],
+        category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
@@ -227,10 +260,10 @@ export const products = [
         _id: "wqttrt",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
+        price: 400,
+        img: [woman9],
+        category: "Women",
+        subCategory: "Winterwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -239,9 +272,9 @@ export const products = [
         _id: "sdfhaer",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
+        price: 500,
+        img: [woman10],
+        category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
@@ -252,9 +285,9 @@ export const products = [
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
+        img: [child4],
+        category: "Kids",
+        subCategory: "Bottomwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
@@ -263,133 +296,14 @@ export const products = [
         _id: "qtwejj",
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
+        price: 400,
+        img: [man3],
         category: "Men",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
     },
-    {
-        _id: "wshgerrw",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "weyruj",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "jjweryrey",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "eyery",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "juj54yu7wq",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "j45y74w",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "ghjjjt",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "tutrwe",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "srduu",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    },
-    {
-        _id: "jjhnntry",
-        name: "Some Kind of Clothes",
-        description: "Very nice and comfortable for girls with good body sha",
-        price: 200,
-        img: [hero_img],
-        category: "Men",
-        subCategory: "Topwear",
-        sizes: ["S", "M", "L"],
-        dates: 12342425425,
-        bestseller: true
-    }
+    
 
 ]
