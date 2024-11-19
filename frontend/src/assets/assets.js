@@ -5,6 +5,7 @@ import cart_icon from "./cart.png"
 import menu_icon from "./menu.png"
 import close_icon from './close.png'
 import hero_img from './hero_img.jpg'
+import close2 from './close2.png'
 // import kid_01 from './kid-01.jpg'
 import dropdown_icon from './dropdown.png'
 import arrow_down_icon from './arrow_down.png'
@@ -48,13 +49,14 @@ export const assets = {
     man1,
     woman1,
     child1,
-    man2
+    man2,
+    close2,
 }
 
 export const products = [
     {
         _id: "aaaaa",
-        name: "Some Kind of Clothes",
+        name: "Find Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 100,
         img: [woman1],
