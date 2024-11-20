@@ -4,6 +4,8 @@ import profile_icon from "./profile.png"
 import cart_icon from "./cart.png"
 import menu_icon from "./menu.png"
 import close_icon from './close.png'
+import star_icon from './star.png'
+import star_outline_icon from './star_outline.png'
 import hero_img from './hero_img.jpg'
 import close2 from './close2.png'
 // import kid_01 from './kid-01.jpg'
@@ -34,6 +36,7 @@ import child4 from './child4.jpg'
 
 
 
+
 export const assets = {
     logo_icon,
     search_icon,
@@ -51,6 +54,8 @@ export const assets = {
     child1,
     man2,
     close2,
+    star_icon,
+    star_outline_icon,
 }
 
 export const products = [
