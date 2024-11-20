@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
+import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
   const { productId } = useParams();
@@ -77,8 +78,25 @@ const Product = () => {
           </div>
         </div>
       </div>
+      {/* --------description add review section */}
 
-    
+      <div className="mt-20">
+        <div className="flex">
+          <b className="border px-5 py-3 text-sm">Description</b>
+          <p className="border px-5 py-3 text-sm">Reviews {122}</p>
+        </div>
+        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
+          <p>An ecommerce is Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sint dolorem dolor repellendus quaerat, omnis neque praesentium maiores deserunt ad consectetur eum possimus voluptatibus tempora, iusto quisquam doloribus expedita tempore?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptas odio libero, beatae nisi, ipsum neque repudiandae assumenda obcaecati fuga dolor reprehenderit architecto blanditiis veritatis omnis totam? Animi, labore enim.</p>
+        </div>
+      </div>
+
+      {/* -----------display related products--------- */}
+
+      {/* this works if the product belong to the same category and subcategory at the same time */}
+
+      <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
+
     </div>
   ) : <div className='opacity-0'></div>
 }

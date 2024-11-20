@@ -109,7 +109,7 @@ export const products = [
         price: 100,
         img: [man4, man5, man6],
         category: "Men",
-        subCategory: "Winterwear",
+        subCategory: "Bottomwear",
         sizes: ["S", "M", "L"],
         dates: 12342425425,
         bestseller: true
