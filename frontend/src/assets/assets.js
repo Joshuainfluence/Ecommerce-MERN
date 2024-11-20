@@ -56,7 +56,7 @@ export const assets = {
 export const products = [
     {
         _id: "aaaaa",
-        name: "Find Kind of Clothes",
+        name: "Women's Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 100,
         img: [woman1],
@@ -68,7 +68,7 @@ export const products = [
     },
     {
         _id: "abbbba",
-        name: "Some Kind of Clothes",
+        name: "Men's Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 200,
         img: [man1],
@@ -80,7 +80,7 @@ export const products = [
     },
     {
         _id: "bbbbbbbb",
-        name: "Some Kind of Clothes",
+        name: "Men bottom wear ",
         description: "Very nice and comfortable for girls with good body sha",
         price: 300,
         img: [man2],
@@ -92,7 +92,7 @@ export const products = [
     },
     {
         _id: "bbsafdes",
-        name: "Some Kind of Clothes",
+        name: "Bottom wear for men",
         description: "Very nice and comfortable for girls with good body sha",
         price: 200,
         img: [man3],
@@ -107,7 +107,7 @@ export const products = [
         name: "Some Kind of Clothes",
         description: "Very nice and comfortable for girls with good body sha",
         price: 100,
-        img: [man4],
+        img: [man4, man5, man6],
         category: "Men",
         subCategory: "Winterwear",
         sizes: ["S", "M", "L"],
@@ -116,7 +116,7 @@ export const products = [
     },
     {
         _id: "werwqggsd",
-        name: "Some Kind of Clothes",
+        name: "Top wear for women",
         description: "Very nice and comfortable for girls with good body sha",
         price: 500,
         img: [woman2],
