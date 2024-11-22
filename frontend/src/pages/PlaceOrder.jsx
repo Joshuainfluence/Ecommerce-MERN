@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../components/Title'
+import CartTotal from '../components/CartTotal'
 
 const PlaceOrder = () => {
   return (
@@ -32,7 +33,19 @@ const PlaceOrder = () => {
       </div>
 
       {/* -----right side */}
-      
+      <div className="mt-8">
+        <div className="mt-8 min-width-80">
+          <CartTotal />
+        </div>
+        <div className="mt-12">
+          <Title text1={'PAYMENT'} text2={'METHOD'}/>
+
+          {/* -----PAYMENT METHOD SELECTION */}
+          <div className='flex gap-3 flex-col lg:flex-row'>
+
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
