@@ -32,6 +32,7 @@ import woman10 from './woman10.jpg'
 import child2 from './child2.jpg'
 import child3 from './child3.jpg'
 import child4 from './child4.jpg'
+import about from './about.jpg'
 
 
 
@@ -45,6 +46,7 @@ export const assets = {
     menu_icon,
     close_icon,
     hero_img,
+    about,
     // kid_01,
     dropdown_icon,
     arrow_down_icon,
