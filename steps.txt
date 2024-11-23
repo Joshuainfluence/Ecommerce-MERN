@@ -16,3 +16,29 @@ navigate to the main.jsx file, edit the StrictMode to BrowserRouter and import i
 navigate to the app.jsx file, add and import all the required routes needed in the project
 create a Navbar.jsx in the components folder, this file is responsible for the navigations across pages
 create an object for the assets in the asset/assets.js file
+
+for the rest of the projects create the necessary components and logics.
+
+
+
+SETTING UP BACKEND
+
+create a file in backend folder, server.js.
+on the terminal, c:\ecommerce-mern\backend, run the command ->npm init. To install the package.json file. 
+While installing, always use enter key to select the default value.
+
+install dependencies still on the current path c:\ecommerce-mern\backend
+run the command=> npm i cors dotenv express jsonwebtoken mongoose multer nodemon razorpay stripe validator cloudinary bcrypt 
+
+----REASON:
+installing cors to allow the frontend ip to access the backend
+installing dotenv so environment variables can be used in the project
+installing express package for api
+jsonwebtoken to enable user authentication, login & signup
+mongoose for database connectivity
+multer to allow image storage on cloudinary
+nodemon to restart the backend when changes are made in the code
+razorpay and stripe to set up online payment integration
+validator to check if the data coming from the user is valid or not
+bcrypt to encrypt user password and store in database
+

@@ -34,6 +34,9 @@ import child2 from './child2.jpg'
 import child3 from './child3.jpg'
 import child4 from './child4.jpg'
 import about from './about.jpg'
+import stripe from './stripe.png'
+import razorpay from './razorpay.png'
+import razorpay_logo from './razorpay_logo.png'
 
 
 
@@ -60,6 +63,10 @@ export const assets = {
     star_icon,
     star_outline_icon,
     delete_icon,
+    stripe,
+    razorpay,
+    razorpay_logo
+
 }
 
 export const products = [
