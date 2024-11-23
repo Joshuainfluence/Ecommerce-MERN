@@ -8,6 +8,7 @@ import star_icon from './star.png'
 import star_outline_icon from './star_outline.png'
 import hero_img from './hero_img.jpg'
 import close2 from './close2.png'
+import delete_icon from './delete.png'
 // import kid_01 from './kid-01.jpg'
 import dropdown_icon from './dropdown.png'
 import arrow_down_icon from './arrow_down.png'
@@ -58,6 +59,7 @@ export const assets = {
     close2,
     star_icon,
     star_outline_icon,
+    delete_icon,
 }
 
 export const products = [
