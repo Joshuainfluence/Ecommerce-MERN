@@ -1,4 +1,4 @@
-SETTING UP FRONTEND PART
+-------SETTING UP FRONTEND PART-------
 
 install vite using the command -> npm insall vite@latest
 create project name
@@ -21,7 +21,7 @@ for the rest of the projects create the necessary components and logics.
 
 
 
-SETTING UP BACKEND
+------SETTING UP BACKEND---------
 
 create a file in backend folder, server.js.
 on the terminal, c:\ecommerce-mern\backend, run the command ->npm init. To install the package.json file. 
@@ -41,4 +41,30 @@ nodemon to restart the backend when changes are made in the code
 razorpay and stripe to set up online payment integration
 validator to check if the data coming from the user is valid or not
 bcrypt to encrypt user password and store in database
+
+-------BACKEND FOLDERS-----
+config folder for storing all configurations
+middleware folder for storing all the backend middleware
+models for storing the models of our mongoose where we will define the schema
+controllers for managing all the logics of the backend
+routes for managing the express server route
+
+
+-----
+Open package.json file and add the script name sever -> "server": "nodemon server.js" on line 7. 
+so that when we run the npm run start it will start the node server, the start command on line 6 is use for deployment
+but at the local server line 7 is used npm run server where it will start the server using nodemon, 
+so when changes are made in the code, it will restart the server.
+After line for main, set "type": "module" on the next line 5
+
+----
+creating server on server.js file
+after setting up the server.js file, on the terminal c:\ecommerce-mern\backend run => npm run server
+
+-----
+install thunder client extension on vscode to test API
+
+-----
+register account on cluster, mongodb atlas
+
 
