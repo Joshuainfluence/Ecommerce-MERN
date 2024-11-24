@@ -68,3 +68,7 @@ install thunder client extension on vscode to test API
 register account on cluster, mongodb atlas
 
 
+----
+middleware is for those API where we need the admin permission like adding product, removing product, display orders and other APIs
+
+
