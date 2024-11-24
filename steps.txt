@@ -72,3 +72,15 @@ register account on cluster, mongodb atlas
 middleware is for those API where we need the admin permission like adding product, removing product, display orders and other APIs
 
 
+
+-------SETTING UP ADMIN INTERFACE
+in the admin directory path , run => npm install vite@latest .
+input y
+select react, select javascript,
+run -> npm install
+run-> npm install axios react-router-dom react-toastify
+using axios we will make the API call
+install tailwind vite
+
+
+
