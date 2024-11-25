@@ -12,6 +12,7 @@ import Login from './components/Login'
 // thsis page is usjed for settinfg up he router rfo h  page
 
 export const backendUrl = import.meta.env.VITE_BACKEND_URL
+export const currency = '$'
 
 const App = () => {
 
