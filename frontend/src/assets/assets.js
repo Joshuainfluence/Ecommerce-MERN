@@ -37,6 +37,8 @@ import about from './about.jpg'
 import stripe from './stripe.png'
 import razorpay from './razorpay.png'
 import razorpay_logo from './razorpay_logo.png'
+import quality_icon from './quality_icon.png'
+import support_img from './support_img.png'
 
 
 
@@ -65,7 +67,9 @@ export const assets = {
     delete_icon,
     stripe,
     razorpay,
-    razorpay_logo
+    razorpay_logo, 
+    quality_icon,
+    support_img
 
 }
 
