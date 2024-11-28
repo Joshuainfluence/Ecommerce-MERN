@@ -80,6 +80,15 @@ const ShopContextProvider = (props) => {
         cartData[itemId][size] = quantity;
 
         setCartItems(cartData);
+
+        if (token) {
+            try {
+                await axios.post(backendUrl + '/api/cart/update', { itemId, size, quantity }, { headers: { token } })
+            } catch (error) {
+                console.log(error);
+                toast.error(error.message)
+            }
+        }
     }
 
     const getCartAmount = () => {
@@ -117,6 +126,18 @@ const ShopContextProvider = (props) => {
         }
     }
 
+    const getUserCart = async (token) => {
+        try {
+            const response = await axios.post(backendUrl + '/api/cart/get', {}, { headers: { token } })
+            if (response.data.success) {
+                setCartItems(response.data.cartData)
+            }
+        } catch (error) {
+            console.log(error);
+            toast.error(error.message)
+        }
+    }
+
     // useeffect is more like used to call a function
 
     useEffect(() => {
@@ -126,6 +147,7 @@ const ShopContextProvider = (props) => {
     useEffect(() => {
         if (!token && localStorage.getItem('item')) {
             setToken(localStorage.getItem('item'))
+            getUserCart(localStorage.getItem('item'))
         }
     }, [])
 
