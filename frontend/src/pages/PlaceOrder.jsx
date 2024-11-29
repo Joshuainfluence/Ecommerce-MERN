@@ -4,6 +4,7 @@ import CartTotal from "../components/CartTotal";
 import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 
 const PlaceOrder = () => {
@@ -56,13 +57,13 @@ const PlaceOrder = () => {
 
       switch (method) {
         // API calls for COD
-
+        
         case 'cod':
           const response = await axios.post(backendUrl + '/api/order/place', orderData, { headers: { token } })
           console.log(response.data);
           if (response.data.success) {
             // if response is true we are clearing the data from the frontend using the setcartitems
-            
+
             setCartItems({})
             navigate('/orders')
           } else {
@@ -76,6 +77,8 @@ const PlaceOrder = () => {
       }
 
     } catch (error) {
+      console.log(error);
+      toast.error(error.message)
 
     }
   }
