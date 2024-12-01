@@ -11,6 +11,7 @@ const ProductItem = ({id,image,name,price}) => {
             </div>
             <p className='pt-3 pb-1 text-sm'>{name}</p>
             <p className='text-sm font-medium'>{currency}{price}</p>
+            {/* <button className='bg-black text-white py-2 px-3 w-full border rounded-full '>BUY THE GLOSS</button> */}
         </Link>
     )
 }

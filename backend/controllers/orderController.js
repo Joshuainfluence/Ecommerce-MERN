@@ -14,6 +14,7 @@ const deliveryCharge = 10
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 const flw = new Flutterwave(process.env.FLUTTERWAVE_PUBLIC_KEY, process.env.FLUTTERWAVE_SECRET_KEY)
+console.log(process.env.FLUTTERWAVE_PUBLIC_KEY, process.env.FLUTTERWAVE_SECRET_KEY)
 
 
 // placing orders using cash on delivery method
@@ -158,14 +159,14 @@ const placeOrderFlutterwave = async (req, res) => {
 
         // prepare flutterwave payment data
         const payload = {
-            tx_ref: `tx-${Date.now()}`, //unique transaction reference
-            amount: totalAmount,
+            tx_ref: `tx-${Date.now()}-${newOrder._id}`, //unique transaction reference
+            amount: req.body.amount,
             currency: currency.toUpperCase(),
             redirect_url: `${origin}/verify?success=true&orderId=${newOrder._id}`,
             customer: {
-                email: 'joshua22gmail.com',
-                phonenumber: '09077685271',
-                name: 'influence',
+                email: req.body.address.email,
+                phonenumber: req.body.address.phone,
+                name: `${req.body.address.firstName} ${req.body.address.lastName}`,
             },
             customizations: {
                 title: 'Order payment',
@@ -174,9 +175,14 @@ const placeOrderFlutterwave = async (req, res) => {
         };
         // initialize payment using Flutterwave
         const response = await flw.PaymentLinks.create(payload);
+        console.log("Response: ", response)
 
         // respond with payment link
-        res.json({ success: true, session_url: response.data.link })
+        if (response.status === 'success') {
+            res.json({ success: true, session_url: response.data.link });
+        } else {
+            res.status(400).json({ success: false, message: response.message });
+        }
     } catch (error) {
         console.error(error);
         res.json({ success: false, message: error.message });
@@ -193,7 +199,7 @@ const verifyFlutterwave = async (req, res) => {
         if (response.data.status === "successful") {
             // Update order status to paid
             await orderModel.findByIdAndUpdate(orderId, { payment: true });
-            await userModel.findByIdAndUpdate(response.data.customer.id, { cartData: {} });
+            await userModel.findByIdAndUpdate(response.data.userId, { cartData: {} });
             res.json({ success: true, message: "Payment successful!" });
         } else {
             // If payment fails, delete the order
