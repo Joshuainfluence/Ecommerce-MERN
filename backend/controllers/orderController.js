@@ -2,24 +2,27 @@
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js";
 import Stripe from 'stripe'
+import Flutterwave from 'flutterwave-node-v3'
 
 // global variable
 const currency = 'usd'
-const deliveryCharge = 10 
+const deliveryCharge = 10
 
 
 
 // gateway initialize
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
+const flw = new Flutterwave(process.env.FLUTTERWAVE_PUBLIC_KEY, process.env.FLUTTERWAVE_SECRET_KEY)
+
 
 // placing orders using cash on delivery method
 const placeOrder = async (req, res) => {
     try {
-        const {userId, items, amount, address } = req.body;
+        const { userId, items, amount, address } = req.body;
 
         const orderData = {
-            userId, 
+            userId,
             items,
             address,
             amount,
@@ -31,23 +34,23 @@ const placeOrder = async (req, res) => {
         const newOrder = new orderModel(orderData)
         await newOrder.save()
 
-        await userModel.findByIdAndUpdate(userId, {cartData: {}})
+        await userModel.findByIdAndUpdate(userId, { cartData: {} })
 
-        res.json({success: true, message: "Order Placed"})
+        res.json({ success: true, message: "Order Placed" })
 
     } catch (error) {
         console.log(error);
-        res.json({success: false, message: error.message})
+        res.json({ success: false, message: error.message })
     }
 }
 
 // placing orders using stripe method
 const placeOrderStripe = async (req, res) => {
     try {
-        const {userId, items, amount, address } = req.body;
-        const {origin } = req.headers
+        const { userId, items, amount, address } = req.body;
+        const { origin } = req.headers
         const orderData = {
-            userId, 
+            userId,
             items,
             address,
             amount,
@@ -59,10 +62,10 @@ const placeOrderStripe = async (req, res) => {
         const newOrder = new orderModel(orderData)
         await newOrder.save()
 
-        const line_items = items.map((item, )=>({
-            price_data:{
-                currency: currency, 
-                product_data:{
+        const line_items = items.map((item,) => ({
+            price_data: {
+                currency: currency,
+                product_data: {
                     name: item.name
 
                 },
@@ -74,9 +77,9 @@ const placeOrderStripe = async (req, res) => {
         }))
 
         line_items.push({
-            price_data:{
-                currency: currency, 
-                product_data:{
+            price_data: {
+                currency: currency,
+                product_data: {
                     name: 'Delivery Charges'
 
                 },
@@ -96,7 +99,7 @@ const placeOrderStripe = async (req, res) => {
 
         })
 
-        res.json({success: true, session_url:session.url})
+        res.json({ success: true, session_url: session.url })
         // await userModel.findByIdAndUpdate(userId, {cartData: {}})
 
         // res.json({success: true, message: "Order Placed"})
@@ -106,70 +109,143 @@ const placeOrderStripe = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.json({success: false, message: error.message})
+        res.json({ success: false, message: error.message })
     }
 }
 
 // verify stripe
 const verifyStripe = async (req, res) => {
-    const {orderId, success, userId} = req.body
+    const { orderId, success, userId } = req.body
 
     try {
         if (success === "true") {
-            await orderModel.findByIdAndUpdate(orderId, {payment:true})
-            await userModel.findByIdAndUpdate(userId, {cartData: {}})
-            res.json({success: true})
-        }else{
+            await orderModel.findByIdAndUpdate(orderId, { payment: true })
+            await userModel.findByIdAndUpdate(userId, { cartData: {} })
+            res.json({ success: true })
+        } else {
             await orderModel.findByIdAndDelete(orderId)
-            res.json({success: false})
+            res.json({ success: false })
         }
     } catch (error) {
         console.log(error)
-        res.json({success:false, message: error.message})
+        res.json({ success: false, message: error.message })
     }
 }
 
 
+const placeOrderFlutterwave = async (req, res) => {
+    try {
+        const { userId, items, amount, address } = req.body
+        const { origin } = req.headers
+
+        // create an order in the database
+        const orderData = {
+            userId,
+            items,
+            address,
+            amount,
+            paymentMethod: 'Flutterwave',
+            date: Date.now()
+        };
+
+        const newOrder = new orderModel(orderData)
+        await newOrder.save()
+
+
+
+        // calculate delivery charge
+        const totalAmount = amount + deliveryCharge;
+
+        // prepare flutterwave payment data
+        const payload = {
+            tx_ref: `tx-${Date.now()}`, //unique transaction reference
+            amount: totalAmount,
+            currency: currency.toUpperCase(),
+            redirect_url: `${origin}/verify?success=true&orderId=${newOrder._id}`,
+            customer: {
+                email: 'joshua22gmail.com',
+                phonenumber: '09077685271',
+                name: 'influence',
+            },
+            customizations: {
+                title: 'Order payment',
+                description: 'Payment for items in cart',
+            }
+        };
+        // initialize payment using Flutterwave
+        const response = await flw.PaymentLinks.create(payload);
+
+        // respond with payment link
+        res.json({ success: true, session_url: response.data.link })
+    } catch (error) {
+        console.error(error);
+        res.json({ success: false, message: error.message });
+    }
+}
+
+const verifyFlutterwave = async (req, res) => {
+    const { orderId, transaction_id } = req.body;
+
+    try {
+        // Verify the transaction
+        const response = await flw.Transaction.verify({ id: transaction_id });
+
+        if (response.data.status === "successful") {
+            // Update order status to paid
+            await orderModel.findByIdAndUpdate(orderId, { payment: true });
+            await userModel.findByIdAndUpdate(response.data.customer.id, { cartData: {} });
+            res.json({ success: true, message: "Payment successful!" });
+        } else {
+            // If payment fails, delete the order
+            await orderModel.findByIdAndDelete(orderId);
+            res.json({ success: false, message: "Payment failed!" });
+        }
+    } catch (error) {
+        console.error(error);
+        res.json({ success: false, message: error.message });
+    }
+};
+
 // placing orders using razorpay method
 const placeOrderRazorpay = async (req, res) => {
-    
+
 }
 
 // All orders data for admin panel
 const allOrders = async (req, res) => {
     try {
         const orders = await orderModel.find({})
-        res.json({success: true, orders})
+        res.json({ success: true, orders })
     } catch (error) {
-        res.json({success: false, message: error.message})
+        res.json({ success: false, message: error.message })
     }
 }
 
 // user order data for frontend
 const userOrders = async (req, res) => {
     try {
-       
-        const {userId} = req.body
-        const orders = await orderModel.find({userId})
-        res.json({success: true, orders})
+
+        const { userId } = req.body
+        const orders = await orderModel.find({ userId })
+        res.json({ success: true, orders })
 
     } catch (error) {
         console.log(error);
-        res.json({success: false, message: error.message})
-        
+        res.json({ success: false, message: error.message })
+
     }
 }
 
 // update order status from admin panel
 const updateStatus = async (req, res) => {
     try {
-        const {orderId, status} = req.body
-        await orderModel.findByIdAndUpdate(orderId, {status})
-        res.json({success: true, message: "Status Updated"})
+        const { orderId, status } = req.body
+        await orderModel.findByIdAndUpdate(orderId, { status })
+        res.json({ success: true, message: "Status Updated" })
     } catch (error) {
         console.log(error);
-        res.json({success: false, message: error.message})
+        res.json({ success: false, message: error.message })
     }
 }
 
-export {verifyStripe, placeOrder, placeOrderStripe, placeOrderRazorpay, allOrders, userOrders, updateStatus}
+export {placeOrderFlutterwave, verifyFlutterwave, verifyStripe, placeOrder, placeOrderStripe, placeOrderRazorpay, allOrders, userOrders, updateStatus }

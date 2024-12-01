@@ -39,6 +39,7 @@ import razorpay from './razorpay.png'
 import razorpay_logo from './razorpay_logo.png'
 import quality_icon from './quality_icon.png'
 import support_img from './support_img.png'
+import flutterwave from './flutterwave.png'
 
 
 
@@ -69,7 +70,8 @@ export const assets = {
     razorpay,
     razorpay_logo, 
     quality_icon,
-    support_img
+    support_img,
+    flutterwave
 
 }
 
